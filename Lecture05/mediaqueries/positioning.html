@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            width: 100%;
+        }
+        .outer {
+            background-color: teal;
+            margin-left: 30%;
+            width: 50%;
+            height: 100px;
+        }
+        .inner {
+            position: static;
+            background-color: red;
+            top: 30px;
+            left: 40px;
+            width: 10%;
+            height: 10%;
+        }
+
+        .testdiv {
+            margin: 20px;
+            padding: 20px;
+            border-color: black;
+            border-width: 10px;
+            border-style: solid;
+
+        }
+
+        #one {
+            background-color: burlywood;
+        }
+
+        #two {
+            background-color: aquamarine;
+        }
+
+        #three {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+
+<div class="outer">
+    <div class="inner">
+
+    </div>
+    <br>
+    <div class="inner">
+
+    </div>
+</div>
+
+<div style="background-color: chartreuse">
+    <div style="margin-left: 30%;
+    margin-right: 30%;
+    width: 60%;
+    height: 50px;
+    background-color: dodgerblue"></div>
+</div>
+
+<div class="testdiv" id="one">
+    <div class="testdiv" id="two">
+        <div style="border-style: dashed; border-width: 2px">
+        <div class="testdiv" id="three">Hello</div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+
+
+
+</body>
+</html>
