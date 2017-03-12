@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        padding: 40px;
+    }
+    @keyframes bounce {
+        from {
+            padding: 40px;
+            margin-left: 40px;
+            background-color: aqua;
+            transform: translateY(-300px)
+        }
+
+    }
+    .divone {
+        margin-left: 100px;
+        margin-top: 300px;
+        display: inline-block;
+        padding: 10px;
+        background-color: chocolate;
+        animation-name: bounce;
+        animation-duration: 1.5s;
+        animation-iteration-count: 4;
+        animation-direction: alternate;
+    }
+</style>
+<body>
+<div class="divone" style="animation-timing-function: linear; "></div>
+<div class="divone" style="animation-timing-function: ease-in; "></div>
+<div class="divone" style="animation-timing-function: ease-out; "></div>
+<div class="divone" style="animation-timing-function: ease-in-out; "></div>
+<div class="divone" style="animation-timing-function: ease;"></div>
+<div class="divone"></div>
+
+
+</body>
+</html>

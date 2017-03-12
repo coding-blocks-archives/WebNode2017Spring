@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        ul.cb {
+            padding-left: 0;
+        }
+
+        ul ul.cb {
+            padding-left: 40px;
+        }
+
+        li.cb {
+            padding: 10px;
+            background-color: lightcoral;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+
+        li ul.cb {
+            display: none;
+        }
+
+        li:hover > ul {
+            display: block;
+        }
+        li:hover > ul > li {
+            display: block;
+        }
+        li:hover > ol {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+<ul class="cb">
+    <li><span>Basic</span>
+        <ul>
+            <li>Launchpad
+                <ul>
+                    <li>DS</li>
+                    <li>Algos</li>
+                    <li>C++</li>
+                </ul>
+            </li>
+            <li>Crux
+                <ul>
+                    <li>DS</li>
+                    <li>Algos</li>
+                    <li>Java</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Development
+        <ul>
+            <li>Pandora
+                <ul>
+                    <li>Java</li>
+                    <li>Android</li>
+                    <li>Firebase</li>
+                </ul>
+            </li>
+            <li>Elixir</li>
+            <li>Django</li>
+        </ul>
+    </li>
+    <li>Advanced</li>
+
+</ul>
+
+</body>
+</html>
