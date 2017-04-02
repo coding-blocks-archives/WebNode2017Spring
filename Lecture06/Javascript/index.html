@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="mylist">
+
+</ul>
+
+<script>
+    var mylist = document.getElementById('mylist');
+    var startTime = new Date().getTime();
+
+    var c3 = 0, c5 = 0;
+
+    var list = "";
+
+//    for (var i = 1; i <= 1000; i++) {
+//        var print = "";
+//        c3++;
+//        c5++;
+//        if (c3 == 3) {
+//            print += "fizz";
+//            c3 = 0;
+//        }
+//        if (c5 == 5) {
+//            print += "buzz";
+//            c5 = 0;
+//        }
+//        if (print == "") print = i;
+//        list += "<li>" + print + "</li>"
+//    }
+
+
+    for (var i = 0; i < 10000; i++) {
+        var print = "";
+        if (i % 3 == 0) print += "fizz";
+        if (i % 5 == 0) print += "buzz";
+        if (print == "") print = i;
+
+        list += "<li>" + print + "</li>"
+    }
+    mylist.innerHTML += list;
+
+
+    var endTime = new Date().getTime();
+    console.log(endTime - startTime);
+</script>
+</body>
+</html>
