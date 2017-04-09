@@ -13,5 +13,10 @@ $(function () {
 
 });
 
+String.prototype.appendTo = function (selector) {
+
+    $(this.substring(0)).appendTo(selector)
+};
+
 
 console.log('script ran');
