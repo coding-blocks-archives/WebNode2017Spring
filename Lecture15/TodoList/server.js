@@ -19,7 +19,11 @@ let todoList = [];
 function refreshTodos(done) {
     fs.readFile(filePath, function (err, data) {
         if (!err) {
-            todoList = JSON.parse(data.toString());
+            try {
+                todoList = JSON.parse(data.toString());
+            } catch (e) {
+                todoList = [];
+            }
             done();
         }
     });
