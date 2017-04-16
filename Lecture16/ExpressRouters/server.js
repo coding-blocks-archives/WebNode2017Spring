@@ -1,35 +1,22 @@
+/**
+ * Created by championswimmer on 16/04/17.
+ */
 const express = require('express');
-const bodyparser = require('body-parser');
 
 const app = express();
 
+const routes = {
+    students: require('./routes/students'),
+    teachers: require('./routes/teachers'),
+    classes: require('./routes/classes')
+};
 
-function mod1(req, res, next) {
-    console.log('Mod1 running');
+app.use('/teachers', routes.teachers);
+app.use('/students', routes.students);
+app.use('/classes', routes.classes);
 
-    req.query.q = req.query.q.replace('a', 'b');
 
-    next();
-}
 
-function mod2(req, res, next) {
-    console.log('Mod2 running');
-    //next();
-    res.send(res.body.split(' '));
-}
-
-app.use(mod1);
-
-app.get('/', function (req, res, next) {
-    console.log('Get function');
-
-    res.set("a", " Some String Here ");
-    res.body = " You said this to me = " + req.query.q;
-    next();
-
+app.listen(3678, function () {
+    console.log("Server started on http://localhost:3678");
 });
-
-app.use(mod2);
-
-
-app.listen(4444, () => {console.log("http://localhost:4444");})
