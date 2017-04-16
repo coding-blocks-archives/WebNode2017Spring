@@ -12,6 +12,23 @@ let students = [
     "Piyush"
 ];
 
-route.get('/all', (req, res) => res.send(students));
+route.get('/', (req, res) => {
+    res.render('page', {
+        title: "Students Page",
+        body: "Get all data about students here"
+    })
+});
+
+route.get('/all', (req, res) =>  {
+    res.render('students', {
+        title: "Student List",
+        students: students
+    })
+});
+
+route.get('/add', (req, res) => {
+    students.push(req.query.name);
+    res.redirect('/students/all');
+});
 
 module.exports = route;
