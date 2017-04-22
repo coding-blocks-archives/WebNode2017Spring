@@ -51,7 +51,18 @@ sequelize.sync().then(function () {
     console.log("DB is prepared");
 });
 
+function addProduct (name, price) {
+    return dbUtils.Product.create({
+        name: name,
+        price: price
+    })
+}
+
+function listProducts () {
+    return dbUtils.Product.findAll()
+}
+
 module.exports = {
-    User, Transaction, Product
+    addProduct, listProducts
 };
 

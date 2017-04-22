@@ -4,7 +4,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const dbUtils = require('./dbutils');
 
 const app = express();
 

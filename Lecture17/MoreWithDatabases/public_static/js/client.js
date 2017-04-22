@@ -4,6 +4,11 @@
 
 $(function () {
 
+
+    // $.get('/api/products', function (data) {
+    //
+    // });
+
     $('#newproductform').submit(function (ev) {
         ev.preventDefault();
         $.post('/api/products/add', {

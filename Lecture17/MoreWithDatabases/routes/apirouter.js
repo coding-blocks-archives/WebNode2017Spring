@@ -5,8 +5,8 @@ const route = require('express').Router();
 const dbUtils = require('../dbutils');
 
 route.get('/products', function (req, res) {
-    dbUtils.Product.findAll().then(function (products) {
-        res.send(products);
+    dbUtils.listProducts().then(function (products) {
+        res.send(products)
     })
 });
 
@@ -14,15 +14,10 @@ route.post('/products/add', function (req, res) {
     let price = parseInt(req.body.price);
     let name = req.body.name;
 
-    dbUtils.Product.create({
-        name: name,
-        price: price
-    }).then(function (data) {
-        console.log('Created');
-        console.log(data);
-        res.redirect('/api/products');
-        //res.send(data);
+    dbUtils.addProduct(name, price).then(function (data) {
+        res.redirect('/api/products')
     })
+
 
 
 });

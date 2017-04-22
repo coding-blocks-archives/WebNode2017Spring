@@ -5,7 +5,7 @@ const route = require('express').Router();
 const dbUtils = require('../dbutils');
 
 route.get('/products', function (req, res) {
-    dbUtils.Product.findAll().then(function (products) {
+    dbUtils.Product.findAll({limit: 10}).then(function (products) {
         res.render('products', {products: products})
     })
 });
