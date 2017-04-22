@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<form method="post" action="/products/add" id="newproductform">
-    <input type="text" name="name">
-    <input type="number" name="price">
+<form id="newproductform" action="/products/add" method="post">
+    <input type="text" name="name" id="productname">
+    <input type="number" name="price" id="productprice">
     <input type="submit" value="ADD">
 </form>
 
-<table border="1" cellpadding="10">
+<table border="1" cellpadding="10" id="productlist">
     <tr>
         <th> ID </th>
         <th> Product </th>
