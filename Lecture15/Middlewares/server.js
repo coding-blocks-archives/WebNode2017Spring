@@ -9,6 +9,7 @@ const app = express();
 
 function m1(req, res, next) {
     console.log('We are in middleware 1');
+    console.log("host" + req.headers);
     next();
 }
 
