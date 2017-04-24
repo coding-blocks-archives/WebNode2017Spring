@@ -1,0 +1,31 @@
+
+/*..........Responsive Image by @angularboy ............. */
+
+/*********** To make an image Responsive ****************/
+
+/* img {
+	max-width: 100%;
+	height: auto;
+}
+*/
+
+/******************* To make an image center ****************/
+
+/*
+
+ img {
+	display: block;
+	margin: 0 auto;
+ } 
+*/
+ /********** Percentage vs Viewport Width***************** */
+
+img {
+    width: 90vh;
+    /* height: 40%; */
+    display: block;
+    height: 90vh;
+    /* width: 80vw; */
+    margin: 0 auto;
+}
+
