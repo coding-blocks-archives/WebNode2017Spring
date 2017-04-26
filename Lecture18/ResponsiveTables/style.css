@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+th,td {
+    text-align: center;
+    border: 0;
+    border-bottom: 1px solid gray;
+    height: 50px;
+    border-right: 1px solid gray;
+}
+
+
+
+
+@media (max-width: 700px) {
+    th, td {
+        display: block;
+        float: left;
+    }
+
+    th {
+        width: 100%;
+        background-color: #000;
+        color: white;
+        padding-top: 10px;
+    }
+
+    td {
+        width: 33.33%;
+    }
+
+    thead th {
+        display: none;
+    }
+
+    td::before {
+        display: block;
+        font-weight: bold;
+        margin-top: .33em;
+        margin-bottom: .33em;
+    }
+
+    td:nth-child(2):before {
+        content: "First Name";
+    }
+
+    td:nth-child(3):before {
+        content: "Last Name";
+    }
+
+    td:nth-child(4):before {
+        content: "Section";
+    }
+
+    td:nth-child(5):before {
+        content: "Roll Number";
+    }
+
+    td:nth-child(6):before {
+        content: "Marks";
+    }
+
+    td:nth-child(7):before {
+        content: "Position";
+    }
+
+    td:nth-child(8):before {
+        content: "Discipline";
+    }
+
+    td:nth-child(9):before {
+        content: "Sports";
+    }
+
+    td:nth-child(10):before {
+        content: "Weight";
+    }
+
+    td:nth-child(11):before {
+        content: "Height";
+    }
+
+    td:nth-child(12):before {
+        content: "Attendance";
+    }
+}
+
+@media (min-width: 501px) and (max-width: 700px) {
+    td {
+        width: 25%;
+    }
+}
+
